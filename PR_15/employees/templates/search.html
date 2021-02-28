@@ -1,0 +1,33 @@
+<h1>Результаты поиска сотрудников по фамилии: {{ search_query }}</h1>
+
+<table>
+<tr>
+  <th>id</th>
+  <th>Имя</th>
+	<th>Фамилия</th>
+	<th>Дата рождения</th>
+  <th>Место жительства</th>
+  <th>Образование</th>
+  <th>Специальность</th>
+	<th>Подразделение</th>
+	<th>Оклад ($)</th>
+	<th>Дата прихода в фирму</th>
+	<th>Дата последнего назначения</th>
+ </tr>
+{% for employee in items %}
+ <tr>
+  <td>{{employee.id}}</td>
+  <td>{{employee.first_name}}</td>
+  <td>{{employee.second_name}}</td>
+  <td>{{employee.date}}</td>
+  <td>{{employee.address}}</td>
+  <td>{{employee.education}}</td>
+  <td>{{employee.job}}</td>
+  <td>{{employee.department}}</td>
+  <td>{{employee.salary}}</td>
+  <td>{{employee.employment_date}}</td>
+  <td>{{employee.last_promotion_date}}</td>
+ </tr>
+{% endfor %}
+
+</table>

@@ -1,51 +1,32 @@
 # -*- coding: utf-8 -*-
 
 # Дана строка.
-def doWeirdThingsWithString(string):
-  if len(string) <= 2:
-    print('You can\'t use a string that short!')
-    return
+string = 'hello world'
 
-  # Сначала выведите третий символ этой строки.
-  print(string[2])
+# Сначала выведите третий символ этой строки.
+print(string[2])
 
-  # Во второй строке выведите предпоследний символ этой строки.
-  print(string[-2])
+# Во второй строке выведите предпоследний символ этой строки.
+print(string[-2])
 
-  # В третьей строке выведите первые пять символов этой строки.
-  print(string[0 : 5])
+# В третьей строке выведите первые пять символов этой строки.
+print(string[: 5])
 
-  # В четвертой строке выведите всю строку, кроме последних двух символов.
-  print(string[0 : len(string) - 2])
+# В четвертой строке выведите всю строку, кроме последних двух символов.
+print(string[: -2])
 
-  stringWithEvenCharacters = ''
-  stringWithOddCharacters = ''
-  for i in range(0, len(string)): 
-    if i % 2 == 0:
-      # В пятой строке выведите все символы с четными индексами (считая, что индексация начинается с 0, поэтому символы выводятся начиная с первого).
-      stringWithEvenCharacters += string[i]
-    else:
-      # В шестой строке выведите все символы с нечетными индексами, то есть начиная со второго символа строки.
-      stringWithOddCharacters += string[i]
+#В пятой строке выведите все символы с четными индексами 
+#(считая, что индексация начинается с 0, поэтому символы выводятся начиная с первого).
+print(string[::2])
 
-  print(stringWithEvenCharacters)
-  print(stringWithOddCharacters)
+#В шестой строке выведите все символы с нечетными индексами, то есть начиная со второго символа строки.
+print(string[1::2])
 
-  # В седьмой строке выведите все символы в обратном порядке.
-  reversedString = ''
-  for i in reversed(range(0, len(string))):
-    reversedString += string[i]
-  print(reversedString)
+#В седьмой строке выведите все символы в обратном порядке
+print(string[::-1])
 
-  # В восьмой строке выведите все символы строки через один в обратном порядке, начиная с последнего.
-  reversedStringWithGaps = ''
-  for i in reversed(range(0, len(string))):
-    if i % 2 == 0:
-      reversedStringWithGaps += string[i]
-  print(reversedStringWithGaps)
+#В восьмой строке выведите все символы строки через один в обратном порядке, начиная с последнего.
+print(string[::-2])
 
-  # В девятой строке выведите длину данной строки.
-  print(len(string))
-
-
-doWeirdThingsWithString('hello world')
+#В девятой строке выведите длину данной строки.
+print(len(string))
